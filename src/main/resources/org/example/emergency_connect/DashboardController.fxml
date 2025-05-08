@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Group?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootPane" prefHeight="800.0" prefWidth="1150.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.emergency_connect.DashboardController">
+   <children>
+      <ImageView fitHeight="730.0" fitWidth="1150.0" layoutY="69.0" opacity="0.14" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/3415251_20010.jpg" />
+         </image>
+      </ImageView>
+      <Pane layoutY="70.0" opacity="0.41" prefHeight="730.0" prefWidth="261.0" style="-fx-background-color: #1B5E20;">
+         <effect>
+            <DropShadow />
+         </effect>
+      </Pane>
+      <AnchorPane prefHeight="70.0" prefWidth="1150.0" style="-fx-background-color: #1B5E20;">
+         <effect>
+            <DropShadow radius="20.105" width="61.42" />
+         </effect>
+         <children>
+            <ImageView fitHeight="40.0" fitWidth="136.0" layoutX="24.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/med.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="closeButton" fitHeight="28.0" fitWidth="25.0" layoutX="1103.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/close.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="closeButton1" fitHeight="29.0" fitWidth="29.0" layoutX="1069.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/icons8-minimize-100.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Label layoutX="414.0" layoutY="100.0" text="Disaster Coordination System" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="42.0" />
+         </font>
+      </Label>
+      <VBox fx:id="complaintsSection" alignment="CENTER" layoutY="245.0" prefHeight="70.0" prefWidth="261.0" style="-fx-background-color: #1B5E20;">
+         <children>
+            <Group>
+               <children>
+                  <ImageView fitHeight="42.0" fitWidth="40.0" layoutX="3.0" pickOnBounds="true" preserveRatio="true" style="-fx-translate-x: 10;">
+                     <image>
+                        <Image url="@images/icons8-complaints-100%20(1).png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="64.0" layoutY="7.0" text="Complaints Section" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Group>
+         </children>
+      </VBox>
+      <VBox fx:id="adminSection" alignment="CENTER" layoutY="330.0" prefHeight="70.0" prefWidth="261.0" style="-fx-background-color: #1B5E20;">
+         <children>
+            <Group style="-fx-translate-x: -15;">
+               <children>
+                  <ImageView fitHeight="42.0" fitWidth="40.0" layoutX="-35.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true" style="-fx-translate-x: 10;">
+                     <image>
+                        <Image url="@images/icons8-admin-100.png" />
+                     </image>
+                  </ImageView>
+                  <Label contentDisplay="CENTER" layoutX="26.0" layoutY="7.0" text="Admin Section" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Group>
+         </children>
+      </VBox>
+      <VBox alignment="CENTER" layoutY="160.0" prefHeight="70.0" prefWidth="261.0" style="-fx-background-color: #1B5E20;">
+         <children>
+            <Group style="-fx-translate-x: -33;">
+               <children>
+                  <ImageView fitHeight="42.0" fitWidth="40.0" layoutX="3.0" pickOnBounds="true" preserveRatio="true" style="-fx-translate-x: 10;">
+                     <image>
+                        <Image url="@images/icons8-dashboard-100.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="66.0" layoutY="7.0" text="Dashboard" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Group>
+         </children>
+      </VBox>
+      <VBox alignment="CENTER" layoutX="816.0" layoutY="241.0" prefHeight="101.0" prefWidth="301.0" style="-fx-background-color: #1B5E20;">
+         <effect>
+            <DropShadow />
+         </effect>
+         <children>
+            <Group>
+               <children>
+                  <Label text="Total Disasters : " textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="totalDisastersLabel" layoutX="180.0" layoutY="1.0" prefHeight="32.0" prefWidth="40.0" text="0" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Group>
+         </children>
+      </VBox>
+      <BarChart fx:id="bargraphbystatus" layoutX="270.0" layoutY="351.0" prefHeight="429.0" prefWidth="457.0" style="-fx-text-fill:#ffffff; -fx-font-weight: bold;" title="Reports By Status">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" />
+        </yAxis>
+      </BarChart>
+      <PieChart fx:id="Piechartbydisastertype" layoutX="739.0" layoutY="386.0" prefHeight="385.0" prefWidth="385.0" style="-fx-text-fill: #ffffff; -fx-font-weight: bold;" title="Breakdown By Disaster Type" />
+      <Label layoutX="278.0" layoutY="195.0" text="The dashboard provides a real-time overview of reported disasters, enabling" textFill="WHITE" />
+      <Label layoutX="278.0" layoutY="216.0" text="efficient monitoring and decision-making. It features a bar graph displaying the" textFill="WHITE" />
+      <Label layoutX="278.0" layoutY="238.0" text="status distribution of reports (pending, in progress, resolved) and a pie chart" textFill="WHITE" />
+      <Label layoutX="278.0" layoutY="260.0" text="illustrating the breakdown of disaster types. These interactive visualizations help" textFill="WHITE" />
+      <Label layoutX="278.0" layoutY="282.0" text="admins track trends and response efforts, ensuring a swift and effective" textFill="WHITE" />
+      <Label layoutX="278.0" layoutY="304.0" text="disaster management process." textFill="WHITE" />
+   </children>
+</AnchorPane>
